@@ -1,6 +1,8 @@
 use std::mem::forget;
 
-fn main() {}
+fn main() {
+    println!("{}", is_palindrome_num(123321))
+}
 
 fn two_sum_first_ans(nums: Vec<i32>, target: i32) -> Vec<i32> {
     // Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.
@@ -16,3 +18,10 @@ fn two_sum_first_ans(nums: Vec<i32>, target: i32) -> Vec<i32> {
     }
     return res;
 }
+
+fn is_palindrome_num_first_ans(x: i32) -> bool {
+    // Given an integer x, return true if x is a palindrome, and false otherwise.
+    let reversed: String = x.to_string().chars().rev().collect();
+    x.to_string() == reversed
+}
+
